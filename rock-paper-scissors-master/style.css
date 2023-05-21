@@ -374,7 +374,7 @@ button{
             -moz-transform: scale(1.5);
             -ms-transform: scale(1.5);
             -o-transform: scale(1.5);
-}
+    }
         
         #rules-mobile#text-rules{
             transform: scale(1.7);
@@ -382,7 +382,7 @@ button{
             -moz-transform: scale(1.7);
             -ms-transform: scale(1.7);
             -o-transform: scale(1.7);
-}
+    }
 }
 @media screen and (max-width: 1000px) {
     #game #game__picked, #game #game__random-picked{
@@ -449,9 +449,14 @@ button{
     }
     #section-result-mobile{
         display: inline-block;
-        margin: 8% auto;
+        margin: 1% auto;
         width: min-content;
-    }
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
     #section-result-mobile #game__result-container .result-text{
         font-size: 1.8em;
     }
