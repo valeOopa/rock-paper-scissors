@@ -17,7 +17,7 @@ let newWidth
 
 function handleResolutionChange() {
     newWidth = window.innerWidth;
-    if(newWidth <= 660){
+    if(newWidth <= 780){
         resultMobile.id = 'section-result-mobile';
         document.getElementById("article").appendChild(resultMobile);
         try{
@@ -77,13 +77,13 @@ const verifyWin = (opSelected,e) => {
         },1500);
         resultContainer.style.display = 'flex';
 
-        if(newWidth > 660) {
+        if(newWidth > 780) {
             resultText.textContent = result;
             
         }else resultMobile.children[0].children[0].textContent = result;
         
         setTimeout(()=>{
-            if(newWidth > 660){
+            if(newWidth > 780){
                 
                 addAnimation(picked,'movePickedOption');
                 addAnimation(randomPickedContainer,'moveRandomOption');
@@ -180,7 +180,7 @@ document.getElementById("close-desktop").addEventListener("click",()=>{
 document.getElementById("close-mobile").addEventListener("click",()=>rulesMobile.style.display = 'none');
 
 btnRules.addEventListener("click",()=>{
-    if(newWidth > 660){
+    if(newWidth > 780){
         if(rulesDesktop.classList.contains('closeRules-class')) rulesDesktop.classList.remove('closeRules-class');
         rulesDesktop.style.display = 'block';
         rulesDesktop.classList.add('showRules-class');

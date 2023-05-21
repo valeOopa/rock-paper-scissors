@@ -17,17 +17,20 @@
     --HeaderOutline: hsl(217, 16%, 45%);
 }
 body{
-    background: radial-gradient(circle at 50% 0%,hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
-    min-height: 100vh;
-    overflow: hidden;
+    
+    height: min-content;
 }
 button{
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
 }
 
 #article{
-    overflow: hidden;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: radial-gradient(circle at 50% 0%,hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    height: 100%;
+    min-height: 100vh;
     padding-top: 50px;
     font-size: 16px;
     text-align: center;
@@ -319,6 +322,10 @@ button{
 #section-result-mobile{
     display: none;
 }
+#btn-rules-container{
+    position: sticky;
+    bottom: 10px;
+}
 #footer__rules-btn{
         background: transparent;
         border-radius: 10px;
@@ -331,14 +338,17 @@ button{
         border: 2px solid var(--HeaderOutline);
         right: inherit;
         left: 50%;
-        bottom: 50px;
+        bottom: 20px;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
 }
-@media screen and (min-width: 660px) {
+
+
+
+@media screen and (min-width: 780px) {
     #footer__rules-btn{
         position: absolute;
         left: inherit;
@@ -384,7 +394,7 @@ button{
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
     #article #header{
         width: 90%;
     }
@@ -551,7 +561,6 @@ button{
 
 @media screen and (max-height: 700px) {
     #article{
-        overflow: hidden;
         padding: 10px;
     }
 }
@@ -778,7 +787,6 @@ button{
 
 #rules-mobile{
     display: none;
-    overflow: hidden;
     text-align: center;
     flex-direction: column;
     align-items: center;
@@ -808,7 +816,7 @@ button{
 }
 #rules-mobile #close-mobile{
     position: absolute;
-    bottom: 50px;
+    bottom: 80px;
     background: transparent;
     border: none;
     left: 50%;
