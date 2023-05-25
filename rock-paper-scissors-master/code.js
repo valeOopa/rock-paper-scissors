@@ -1,5 +1,6 @@
 "use strict";
 
+const article = document.getElementById("article");
 const options = document.querySelectorAll('.options');
 const gameContainer = document.getElementById("game");
 
@@ -8,6 +9,7 @@ const resultContainer = document.getElementById('game__result-container');
 const randomPickedContainer = document.getElementById("game__random-picked");
 const scoreHTML = document.getElementById('score-number');
 const resultMobile = document.createElement("SECTION");
+resultMobile.id = 'section-result-mobile';
 if(localStorage.getItem('score') == NaN || localStorage.getItem('score') == null) localStorage.setItem('score',0)
 else scoreHTML.innerHTML = localStorage.getItem('score');
 
@@ -18,8 +20,8 @@ let newWidth
 function handleResolutionChange() {
     newWidth = window.innerWidth;
     if(newWidth <= 780){
-        resultMobile.id = 'section-result-mobile';
-        document.getElementById("article").appendChild(resultMobile);
+        if(!(article.querySelector(`#${resultMobile.id}`))) article.appendChild(resultMobile);
+        
         try{
             gameContainer.removeChild(resultContainer);
         }catch{
