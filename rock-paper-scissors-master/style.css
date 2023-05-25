@@ -345,7 +345,12 @@ button{
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
 }
-
+@media screen and (max-height: 700px) {
+    #section-result-mobile{
+        position: relative; 
+        padding-bottom: 30%;  
+    }
+}
 
 
 @media screen and (min-width: 780px) {
@@ -449,8 +454,9 @@ button{
     }
     #section-result-mobile{
         display: inline-block;
+        
         margin: 1% auto;
-        width: min-content;
+        width: min-content; 
         transform: scale(1);
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
